@@ -1,0 +1,693 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(../fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+header * {
+  color: #F2F5F8;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 600px;
+}
+header #headerTop {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  padding-top: 15px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+}
+header #headerTop #headerL {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #headerTop #headerL a {
+  width: 90%;
+  height: 90%;
+  transition: 0.5s;
+}
+header #headerTop #headerL a:hover {
+  filter: drop-shadow(0 0 4px #F2F5F8);
+}
+header #headerTop #headerL a img {
+  width: 100%;
+  height: 100%;
+}
+header #headerTop #headerR {
+  width: 80%;
+  height: 100%;
+}
+header #headerTop #headerR div, header #headerTop #headerR nav {
+  width: 100%;
+  height: 50%;
+}
+header #headerTop #headerR ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+header #headerTop #headerR ul li {
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: #FFBF46;
+  margin: 0 15px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #headerTop #headerR ul li:hover {
+  background: #F2F5F8;
+  color: #FFBF46;
+  filter: drop-shadow(0 0 4px #FFBF46);
+}
+header #headerTop #headerR ul li:hover a {
+  color: #FFBF46;
+  transition: 0.5s;
+}
+header #headerTop #headerR ul li:hover a img {
+  filter: invert(20%) sepia(84%) saturate(3064%) hue-rotate(323deg) brightness(105%) contrast(102%);
+}
+header #headerTop #headerR ul li:hover a p {
+  color: #FFBF46;
+}
+header #headerTop #headerR ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #headerTop #headerR ul .NavT {
+  background: rgba(255, 190, 70, 0.5);
+}
+header #headerBottom {
+  width: 100%;
+  height: 100%;
+  background: brown;
+}
+header #headerBottom img {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(../fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+footer * {
+  color: #FFBF46;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  height: 300px;
+  width: 100%;
+  background: #292F36;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+footer #backTop {
+  height: 100px;
+  width: 100px;
+  background: #292F36;
+  position: relative;
+  z-index: 10;
+  left: calc(50% - 60px);
+  bottom: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2509803922);
+}
+footer #backTop a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer #backTop a img {
+  width: 80%;
+  height: 80%;
+  margin-top: 15px;
+  transition: 0.5s;
+}
+footer #backTop:hover a img {
+  width: 80%;
+  height: 80%;
+  margin-top: 0;
+}
+footer div {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer div div {
+  height: 100%;
+  width: 40%;
+}
+footer div div ul {
+  height: 100%;
+  width: 45%;
+}
+footer div div ul li:first-child {
+  margin-bottom: 30px;
+}
+footer div div ul li {
+  margin: 25px 0;
+}
+footer div div ul li a {
+  transition: 0.5s;
+}
+footer div div ul li a:hover {
+  color: #F2F5F8;
+  filter: drop-shadow(0 0 4px #FFBF46);
+}
+
+html * {
+  font-family: "Quicksand";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  height: 90%;
+}
+
+.hide {
+  display: none !important;
+}
+
+main p {
+  font-size: 16px;
+  color: #F2F5F8;
+}
+main h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+main h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #292F36;
+  height: 10%;
+  margin-bottom: 15px;
+}
+main h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+main section {
+  width: 90%;
+  margin: 70px auto;
+}
+main #concept {
+  height: 245px;
+}
+main #concept div {
+  width: 100%;
+  height: 90%;
+  background: url(../images/Icons/conceptBack.svg) no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #concept div p {
+  width: 95%;
+  height: 80%;
+  margin-top: 25px;
+}
+main #Recettes, main #Carnet {
+  height: 375px;
+}
+main #Recettes .toPage, main #Carnet .toPage {
+  width: 100px;
+  height: 100px;
+  background: #E57B2E;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2509803922);
+  position: absolute;
+  z-index: 50;
+  left: 91.5%;
+  right: -8.5%;
+  top: 1150px;
+  border-radius: 50%;
+}
+main #Recettes .toPage a, main #Carnet .toPage a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #Recettes .toPage a img, main #Carnet .toPage a img {
+  width: 80%;
+  height: 80%;
+  margin-right: 15px;
+  transition: 0.5s;
+}
+main #Recettes .toPage:hover a img, main #Carnet .toPage:hover a img {
+  width: 80%;
+  height: 80%;
+  margin-right: 0;
+}
+main #Recettes h2, main #Carnet h2 {
+  height: 10%;
+}
+main #Recettes .displayRecipes, main #Carnet .displayRecipes {
+  height: 90%;
+  background: #BF7D4C;
+  border-radius: 10px;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: scroll;
+}
+main #Recettes .displayRecipes ul, main #Carnet .displayRecipes ul {
+  width: fit-content;
+  height: 90%;
+  display: flex;
+  margin-left: 15px;
+}
+main #Recettes .displayRecipes ul li, main #Carnet .displayRecipes ul li {
+  height: 100%;
+  width: 250px;
+  background: #292F36;
+  border-radius: 15px;
+  margin: 0 15px;
+  overflow: hidden;
+  position: relative;
+}
+main #Recettes .displayRecipes ul li .top, main #Carnet .displayRecipes ul li .top {
+  width: 250px;
+  height: 291px;
+  position: absolute;
+  z-index: 10;
+  border-radius: 15px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background: rgba(181, 146, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+main #Recettes .displayRecipes ul li .top p:first-child, main #Carnet .displayRecipes ul li .top p:first-child {
+  height: fit-content;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #F2F5F8;
+}
+main #Recettes .displayRecipes ul li .top p, main #Carnet .displayRecipes ul li .top p {
+  width: 90%;
+  height: 15%;
+  font-weight: bold;
+  font-size: 25px;
+  overflow-wrap: break-word;
+}
+main #Recettes .displayRecipes ul li .sub, main #Carnet .displayRecipes ul li .sub {
+  width: 100%;
+  height: 100%;
+  background: violet;
+}
+main #Recettes .displayRecipes ul li .sub img, main #Carnet .displayRecipes ul li .sub img {
+  width: 100%;
+  height: 100%;
+}
+main #Recettes .displayRecipes ul li:hover .top, main #Carnet .displayRecipes ul li:hover .top {
+  width: 250px;
+  height: 291px;
+  position: absolute;
+  z-index: 10;
+  border-radius: 15px;
+  box-shadow: inset 0 0 6px 4.5px #FFBF46;
+  background: none;
+  backdrop-filter: blur(0px);
+}
+main #Recettes .displayRecipes ul li:hover .sub, main #Carnet .displayRecipes ul li:hover .sub {
+  width: 100%;
+  height: 100%;
+  background: violet;
+}
+main #Recettes .displayRecipes ul li:hover .sub img, main #Carnet .displayRecipes ul li:hover .sub img {
+  width: 100%;
+  height: 100%;
+}
+main #Carnet .toPage {
+  top: 1600px;
+}
+main #display {
+  height: 980px;
+}
+main #display .displayRecipes {
+  height: 90%;
+  background: #BF7D4C;
+  border-radius: 10px;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  overflow-y: scroll;
+}
+main #display .displayRecipes ul {
+  width: 85%;
+  height: fit-content;
+  display: flex;
+  margin-left: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+main #display .displayRecipes ul li {
+  height: 291px;
+  width: 250px;
+  background: #292F36;
+  border-radius: 15px;
+  margin: 20px 15px;
+  overflow: hidden;
+  position: relative;
+}
+main #display .displayRecipes ul li .top {
+  width: 250px;
+  height: 291px;
+  position: absolute;
+  z-index: 10;
+  border-radius: 15px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background: rgba(181, 146, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+main #display .displayRecipes ul li .top p:first-child {
+  height: fit-content;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #F2F5F8;
+}
+main #display .displayRecipes ul li .top p {
+  width: 90%;
+  height: 15%;
+  font-weight: bold;
+  font-size: 25px;
+  overflow-wrap: break-word;
+}
+main #display .displayRecipes ul li .sub {
+  width: 100%;
+  height: 100%;
+  background: violet;
+}
+main #display .displayRecipes ul li .sub img {
+  width: 100%;
+  height: 100%;
+}
+main #display .displayRecipes ul li:hover .top {
+  width: 250px;
+  height: 291px;
+  position: absolute;
+  z-index: 10;
+  border-radius: 15px;
+  box-shadow: inset 0 0 6px 4.5px #FFBF46;
+  background: none;
+  backdrop-filter: blur(0px);
+}
+main #display .displayRecipes ul li:hover .sub {
+  width: 100%;
+  height: 100%;
+  background: violet;
+}
+main #display .displayRecipes ul li:hover .sub img {
+  width: 100%;
+  height: 100%;
+}
+main #SearchBar {
+  height: 70px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #SearchBar input {
+  height: 100%;
+  width: 90%;
+  border-radius: 50px 0 0 50px;
+  border: none;
+  border: 5px solid #FFBF46;
+  text-indent: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #E57B2E;
+  transition: 0.5s;
+}
+main #SearchBar input:hover {
+  background: #D4E3EC;
+}
+main #SearchBar input:focus {
+  outline: none;
+  background: #D4E3EC;
+}
+main #SearchBar button {
+  height: 100%;
+  width: 10%;
+  border-radius: 0 50px 50px 0;
+  border: none;
+  border: 5px solid #FFBF46;
+  background: #D4E3EC;
+  transition: 0.5s;
+}
+main #SearchBar button:hover {
+  background: rgba(0, 0, 0, 0.2509803922);
+}
+main #Connexion {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #Connexion div {
+  width: 100%;
+  height: 90px;
+  display: flex;
+}
+main #Connexion div #buttonBack {
+  height: 4px;
+  background: #E57B2E;
+  position: absolute;
+  z-index: 10;
+  top: 756px;
+  width: 333.25px;
+  left: 407px;
+  transition: 0.7s;
+}
+main #Connexion div #buttons {
+  width: 100%;
+  height: 100%;
+}
+main #Connexion div #buttons button {
+  width: 50%;
+  height: 100%;
+  background: white;
+  border: none;
+  transition: 0.5s;
+  color: #E57B2E;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+main #Connexion div #buttons button:hover {
+  background: #F2F5F8;
+}
+main #Connexion #connexion {
+  height: 600px;
+  width: 95%;
+  margin-top: 50px;
+  border-radius: 15px;
+  background: #F2F2F2;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #Connexion #connexion input {
+  width: 70%;
+  height: 10%;
+  font-size: 30px;
+  margin: 30px 0;
+  border: none;
+  border-bottom: 2px solid #292F36;
+  background: transparent;
+  color: #292F36;
+  transition: 0.5s;
+}
+main #Connexion #connexion input:hover {
+  font-weight: bold;
+  border-bottom: 3px solid #292F36;
+}
+main #Connexion #connexion input:focus {
+  font-weight: bold;
+  border-bottom: 3px solid #292F36;
+  outline: none;
+  color: #E57B2E;
+}
+main #Connexion #connexion button {
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: #FFBF46;
+  margin: 50px 15px 0;
+  transition: 0.5s;
+  border: none;
+  color: #F2F5F8;
+  font-size: 30px;
+  font-weight: bold;
+}
+main #Connexion #connexion button:hover {
+  background: white;
+  box-shadow: 0 0 4px #FFBF46;
+  color: #FFBF46;
+  cursor: pointer;
+}
+main #Connexion #inscrire {
+  height: 600px;
+  width: 150%;
+  margin-top: 50px;
+  border-radius: 15px;
+  background: #F2F2F2;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+main #Connexion #inscrire input {
+  width: 40%;
+  height: 10%;
+  font-size: 30px;
+  margin: 10px 0 0;
+  border: none;
+  border-bottom: 2px solid #292F36;
+  background: transparent;
+  color: #292F36;
+  transition: 0.5s;
+}
+main #Connexion #inscrire input:hover {
+  font-weight: bold;
+  border-bottom: 3px solid #292F36;
+}
+main #Connexion #inscrire input:focus {
+  font-weight: bold;
+  border-bottom: 3px solid #292F36;
+  outline: none;
+  color: #E57B2E;
+}
+main #Connexion #inscrire button {
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: #FFBF46;
+  margin: 20px 15px 0;
+  transition: 0.5s;
+  border: none;
+  color: #F2F5F8;
+  font-size: 30px;
+  font-weight: bold;
+}
+main #Connexion #inscrire button:hover {
+  background: white;
+  box-shadow: 0 0 4px #FFBF46;
+  color: #FFBF46;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=cozyC.css.map */

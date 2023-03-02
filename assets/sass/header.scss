@@ -1,0 +1,36 @@
+@import "variables.scss";
+
+header * { color: $blanc; font-size: 24px; font-weight: bold; text-decoration: none;}
+
+header  { width: 100%; height: 600px; 
+          #headerTop    { width: 100%; height: 150px; position: absolute; z-index: 10; @include flex; padding-top: 15px; background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+                          #headerL  { width: 20%; height: 100%; @include centerBloc;
+                                      a { width: 90%; height: 90%; transition: .5s;
+                                          &:hover { filter: drop-shadow(0 0 4px $blanc)}
+                                          img { @include img;}
+                                        }
+                                    }
+                          #headerR  { width: 80%; height: 100%;
+                                      div, nav { width: 100%; height: 50%; }
+                                      ul  { width: 100%; height: 100%; @include flex; align-items: center; justify-content: end;
+                                            li  { width: fit-content; padding: 15px 20px; border-radius: 50px; background: $jaune; margin: 0 15px; transition: .5s; @include centerBloc;
+                                                  &:hover { background: $blanc; color: $jaune; filter: drop-shadow(0 0 4px $jaune);
+                                                            a { color: $jaune; transition: .5s; 
+                                                                img { filter: invert(20%) sepia(84%) saturate(3064%) hue-rotate(323deg) brightness(105%) contrast(102%);}
+                                                                p { color: $jaune}
+                                                              }
+                                                          }
+                                                  a { @include centerBloc;}
+                                                }
+                                            .NavT { background: rgba(255, 190, 70, 0.5);}
+                                          }
+                                    }
+                        }
+          #headerBottom { width: 100%; height: 100%; background: brown;
+                          img { @include img; }
+                        }
+        }
+
+@media screen {
+  
+}

@@ -1,0 +1,117 @@
+
+@import "reset.scss";
+@import "header.scss";
+@import "footer.scss";
+
+html *  { font-family: "Quicksand";}
+html    { scroll-behavior: smooth;}
+
+.container    { width: 90%; height: 90%;}
+.hide         { display: none !important;}
+
+
+
+main  { 
+        p {font-size: 16px; color: $blanc;}
+        h1 {font-size: 32px; font-weight: bold; text-align: center; margin-top: 50px; margin-bottom: 35px;}
+        h2 {font-size: 24px; font-weight: bold; color: $noir; height: 10%; margin-bottom: 15px;}
+        h3 {font-size: 18px; font-weight: bold;}
+        section   { width: 90%; margin: 70px auto;}
+        #concept  { height: 245px; 
+                    div { width: 100%; height: 90%; background: url(../images/Icons/conceptBack.svg) no-repeat; background-size: 100%; display: flex; justify-content: center; align-items: center;
+                          p { width: 95%; height: 80%; margin-top: 25px;}
+                        }
+                  }
+        #Recettes,#Carnet  { height: 375px;
+                    .toPage { width: 100px; height: 100px; background: $orange; box-shadow: 0 4px 4px $ombre; position: absolute; z-index: 50; left: 91.5%; right: -8.5%; top: 1150px; border-radius: 50%;
+                              a { width: 100%; height: 100%; @include centerBloc; 
+                                  img { width: 80%; height: 80%; margin-right: 15px; transition: .5s;}
+                              }
+                              &:hover { 
+                                a { 
+                                    img { width: 80%; height: 80%; margin-right: 0;}
+                                  }
+                              }
+                            }
+                    h2      { height: 10%;}
+                    .displayRecipes   { height: 90%; background: $marron; border-radius: 10px; box-shadow: inset 0 4px 4px $ombre; @include centerBloc; justify-content: flex-start; overflow-x: scroll;
+                                        ul  { width: fit-content; height: 90%; display: flex; margin-left: 15px;
+                                              li  { height: 100%; width: 250px; background: $noir; border-radius: 15px; margin: 0 15px; overflow: hidden; position: relative;
+                                                    .top  { width: 250px; height: 291px; position: absolute; z-index: 10; border-radius: 15px; transition: .5s; display: flex; flex-direction: column; align-items: center; justify-content: end; background: rgba(181, 146, 255, 0.15); backdrop-filter: blur(5px);
+                                                            p:first-child { height: fit-content; font-weight: bold; font-size: 30px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid $blanc;}
+                                                            p { width: 90%; height: 15%; font-weight: bold; font-size: 25px; overflow-wrap: break-word;}
+                                                          }
+                                                    .sub  { width: 100%; height: 100%; background: violet;
+                                                            img { width: 100%; height: 100%; }
+                                                          }
+                                                    &:hover {
+                                                              .top    { width: 250px; height: 291px; position: absolute; z-index: 10; border-radius: 15px; box-shadow: inset 0 0 6px 4.5px $jaune; background: none; backdrop-filter: blur(0px);}
+                                                              .sub    { width: 100%; height: 100%; background: violet;
+                                                                        img { width: 100%; height: 100%; }
+                                                                      }
+                                                            }
+                                                  }
+                                            }
+                                      }
+                  }
+        #Carnet {.toPage{top: 1600px;} }
+        #display  { height: 980px;
+                    .displayRecipes   { height: 90%; background: $marron; border-radius: 10px; box-shadow: inset 0 4px 4px $ombre; @include centerBloc; align-items: flex-start; overflow-y: scroll;
+                                        ul  { width: 85%; height: fit-content; display: flex; margin-left: 20px; margin-top: 15px; flex-wrap: wrap; @include centerBloc; justify-content: flex-start;
+                                              li  { height: 291px; width: 250px; background: $noir; border-radius: 15px; margin: 20px 15px; overflow: hidden; position: relative;
+                                                    .top  { width: 250px; height: 291px; position: absolute; z-index: 10; border-radius: 15px; transition: .5s; display: flex; flex-direction: column; align-items: center; justify-content: end; background: rgba(181, 146, 255, 0.15); backdrop-filter: blur(5px);
+                                                            p:first-child { height: fit-content; font-weight: bold; font-size: 30px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid $blanc;}
+                                                            p { width: 90%; height: 15%; font-weight: bold; font-size: 25px; overflow-wrap: break-word;}
+                                                          }
+                                                    .sub  { width: 100%; height: 100%; background: violet;
+                                                            img { width: 100%; height: 100%; }
+                                                          }
+                                                    &:hover {
+                                                              .top    { width: 250px; height: 291px; position: absolute; z-index: 10; border-radius: 15px; box-shadow: inset 0 0 6px 4.5px $jaune; background: none; backdrop-filter: blur(0px);}
+                                                              .sub    { width: 100%; height: 100%; background: violet;
+                                                                        img { width: 100%; height: 100%; }
+                                                                      }
+                                                            }
+                                                  }
+                                            }
+                                        }
+                  }
+        #SearchBar  { height: 70px; width: 60%; @include centerBloc;
+                      input { height: 100%; width: 90%; border-radius: 50px 0 0 50px; border: none; border: 5px solid $jaune; text-indent: 30px; font-size: 30px; font-weight: bold; color: $orange; transition: .5s;
+                              &:hover { background: $bleu;}
+                              &:focus { outline: none; background: $bleu;}
+                            }
+                      button  { height: 100%; width: 10%; border-radius:  0 50px 50px 0 ; border: none; border: 5px solid $jaune; background: $bleu; transition: .5s;
+                                &:hover { background: $ombre;}
+                              }
+                    }
+        #Connexion  { width: 45%; @include flex; flex-direction: column; align-items: center;
+                      div { width: 100%; height: 90px; @include flex;
+                            #buttonBack { height: 4px; background: $orange; position: absolute; z-index: 10; top: 756px; width: 333.25px; left: 407px; transition: .7s;}
+                            #buttons  { width: 100%; height: 100%;
+                                        button  { width: 50%; height: 100%; background: white; border: none; transition: .5s; color: $orange; font-size: 24px; font-weight: bold; cursor: pointer;
+                                          &:hover { background: $blanc;}
+                                        }
+                                      }
+                          }
+                      #connexion  { height: 600px; width: 95%; margin-top: 50px; border-radius: 15px; background: $ashes; box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);; transition: .5s; @include centerBloc; flex-direction: column;
+                                    input { width: 70%; height: 10%; font-size: 30px; margin: 30px 0; border: none; border-bottom: 2px solid $noir; background: transparent; color: $noir; transition: .5s;
+                                            &:hover { font-weight: bold; border-bottom: 3px solid $noir;}
+                                            &:focus { font-weight: bold; border-bottom: 3px solid $noir; outline: none; color: $orange;}
+                                          }
+                                    button  { width: fit-content; padding: 15px 20px; border-radius: 50px; background: $jaune; margin: 50px 15px 0; transition: .5s; border: none; color: $blanc; font-size: 30px; font-weight: bold;
+                                              &:hover { background: white; box-shadow: 0 0 4px $jaune; color: $jaune; cursor: pointer;}
+                                            }
+                                  }
+                      #inscrire   { height: 600px; width: 150%; margin-top: 50px; border-radius: 15px; background: $ashes; box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);; transition: .5s; @include centerBloc; justify-content: space-around; flex-wrap: wrap;
+                                    input { width: 40%; height: 10%; font-size: 30px; margin: 10px 0 0; border: none; border-bottom: 2px solid $noir; background: transparent; color: $noir; transition: .5s;
+                                      &:hover { font-weight: bold; border-bottom: 3px solid $noir;}
+                                      &:focus { font-weight: bold; border-bottom: 3px solid $noir; outline: none; color: $orange;}
+                                    }
+                                    button  { width: fit-content; padding: 15px 20px; border-radius: 50px; background: $jaune; margin: 20px 15px 0; transition: .5s; border: none; color: $blanc; font-size: 30px; font-weight: bold;
+                                              &:hover { background: white; box-shadow: 0 0 4px $jaune; color: $jaune; cursor: pointer;}
+                                            }
+                                  }
+                    }
+      }
+
